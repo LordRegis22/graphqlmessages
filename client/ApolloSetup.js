@@ -4,8 +4,8 @@ import { InMemoryCache } from '@apollo/client/cache';
 import { HttpLink, split } from '@apollo/client';
 import { WebSocketLink } from '@apollo/link-ws';
 
-const endpoint = process.env.REACT_APP_ENDPOINT;
-console.log('ap setup');
+const endpoint = 'acrid-yard.us-west-2.aws.cloud.dgraph.io/graphql';
+
 const wsLink = new WebSocketLink({
   uri: `wss://${endpoint}`,
   options: {
