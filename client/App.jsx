@@ -1,11 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { ApolloProvider } from '@apollo/client';
+//import Post from './Post'
+import apolloClient from './ApolloSetup';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-  }
-  render() {
-    return <h1>GraphQL Boilerplate</h1>;
-  }
+function App() {
+  return (
+    <ApolloProvider client={apolloClient}>
+      <h1>GraphQL Boilerplate</h1>
+    </ApolloProvider>
+  );
 }
+
 export default App;
